@@ -1,7 +1,9 @@
 # Text-to-Speech with Real-time Highlighting & Auto Scroll
 
 A beautiful, cross-platform Text-to-Speech sample built with Flutter featuring real-time word highlighting, Auto scroll, pause/resume functionality.
+
 https://github.com/user-attachments/assets/1f14a4d3-8e27-4fcd-a087-11742bef9846
+
 ## Features
 
 - Text-to-Speech conversion.
