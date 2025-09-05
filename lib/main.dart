@@ -33,10 +33,11 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   final FlutterTts _flutterTts = FlutterTts();
   final ScrollController _scrollController = ScrollController();
   final List<String> _sampleTexts = [
-    "Flutter is an open-source UI software development kit created by Google. It is used to develop cross-platform applications for Android, iOS, Linux, macOS, Windows, Google Fuchsia, and the web from a single codebase. When Flutter 1.0 was introduced at the Flutter Live event in 2018, it was initially perceived primarily as a mobile framework. However, the vision for Flutter has always been much broader. The goal is to provide a portable toolkit for building beautiful user experiences wherever you might want to paint pixels on the screen. This includes mobile, web, desktop, and even embedded devices. The Flutter framework contains a modern reactive framework, a 2D rendering engine, and a rich set of widgets for building UIs.",
-    "The Dart programming language is the foundation of Flutter. Dart is a client-optimized language for fast apps on any platform. It is developed by Google and is used to build mobile, desktop, server, and web applications. Dart is an object-oriented, class-based, garbage-collected language with C-style syntax. It can compile to either native code or JavaScript. The language supports interfaces, mixins, abstract classes, reified generics, and type inference. One of the most appreciated features of Dart is its support for asynchronous programming, with features like Futures and Streams, which are essential for building responsive and non-blocking applications that provide a smooth user experience.",
-    "A key feature of Flutter is its extensive library of pre-built widgets. In Flutter, almost everything is a widget, from a simple button or text element to a complex layout structure. Widgets are organized in a tree hierarchy. Each widget is an immutable declaration of part of the user interface. Widgets can be divided into two main categories: stateless and stateful. A stateless widget is one that does not require mutable state. A stateful widget, on the other hand, maintains state that might change during the lifetime of the widget. This declarative approach to UI development, inspired by React, allows developers to build complex UIs by composing simple widgets, leading to a more predictable and maintainable codebase."
+    "ফ্লাটার একটি মুক্ত উন্মুক্ত সফটওয়্যার উন্নয়ন সরঞ্জাম যা গুগল তৈরি করেছে। এটি ব্যবহার করে একসাথে একাধিক প্ল্যাটফর্মের জন্য অ্যাপ্লিকেশন তৈরি করা যায়। একই কোড থেকে অ্যান্ড্রয়েড, আইফোন, লিনাক্স, ম্যাক, উইন্ডোজ এবং এমনকি ওয়েবেও চালানো যায় এমন অ্যাপ তৈরি সম্ভব। দুই হাজার আঠারো সালে যখন প্রথম ফ্লাটার প্রকাশিত হয় তখন মানুষ ভেবেছিল এটি শুধুমাত্র মোবাইলের জন্য ব্যবহার হবে। কিন্তু শুরু থেকেই এর লক্ষ্য ছিল অনেক বড়। এর উদ্দেশ্য হলো এমন একটি বহনযোগ্য সরঞ্জাম দেওয়া, যা দিয়ে যেকোনো যন্ত্রে সুন্দর ব্যবহারকারীর অভিজ্ঞতা তৈরি করা যায়। ফ্লাটারে রয়েছে আধুনিক প্রতিক্রিয়াশীল কাঠামো, শক্তিশালী অঙ্কন ইঞ্জিন এবং প্রচুর প্রস্তুত উপাদান, যা ব্যবহার করে সহজেই ব্যবহারকারীর জন্য আকর্ষণীয় নকশা তৈরি করা যায়।",
+    "ডার্ট নামের প্রোগ্রামিং ভাষাটি ফ্লাটারের ভিতের মতো কাজ করে। ডার্ট হলো এমন একটি ভাষা যা দ্রুত এবং কার্যকরী অ্যাপ বানানোর জন্য বিশেষভাবে তৈরি। গুগল এই ভাষাটি তৈরি করেছে এবং এটি মোবাইল, কম্পিউটার, সার্ভার এমনকি ওয়েবেও ব্যবহার করা যায়। ডার্ট হলো অবজেক্ট ভিত্তিক ভাষা যেখানে শ্রেণি, উত্তরাধিকার, পুনর্ব্যবহারযোগ্য অংশ এবং স্বয়ংক্রিয় মেমরি পরিস্কার করার সুবিধা রয়েছে। এই ভাষা সরাসরি যন্ত্রের ভাষায় বা আবার প্রয়োজনে জাভাস্ক্রিপ্টে রূপান্তরিত হতে পারে। ডার্টের সবচেয়ে জনপ্রিয় বৈশিষ্ট্য হলো এটি একসাথে অনেক কাজ চালাতে পারে। ভবিষ্যত বা প্রবাহের মতো ধরণের বৈশিষ্ট্য ব্যবহার করে খুব সহজে এমন প্রোগ্রাম লেখা যায় যা একদিকে ব্যবহারকারীর আদেশে দ্রুত সাড়া দেয় আবার অন্যদিকে পিছনে জটিল কাজ চালিয়ে যায়।",
+    "ফ্লাটারের সবচেয়ে শক্তিশালী দিক হলো এর বিশাল উপাদান ভান্ডার। এখানে প্রায় সবকিছুই একটি উপাদান, যেমন একটি সাধারণ লেখা, একটি বোতাম বা আবার অনেক জটিল নকশার কাঠামো। এই উপাদানগুলো একটি গাছের মতো সাজানো থাকে, যেখানে প্রতিটি শাখা একটি অংশকে উপস্থাপন করে। উপাদান দু’ধরনের হতে পারে। একটি হলো স্থির উপাদান, যা কখনো পরিবর্তন হয় না। আরেকটি হলো পরিবর্তনশীল উপাদান, যা সময়ের সাথে সাথে ভিন্ন হতে পারে। এই ধরনের ঘোষণামূলক পদ্ধতি ব্যবহার করে পুরো নকশা তৈরি করা হয়। এর ফলে ডেভেলপাররা ছোট ছোট অংশ জুড়ে খুব বড় নকশা তৈরি করতে পারে এবং পুরো কোড সহজে পড়া ও রক্ষণাবেক্ষণ করা যায়।"
   ];
+
   late String _text;
   int _currentSampleIndex = 0;
   int _currentWordStart = 0;
@@ -76,6 +77,9 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   }
 
   void _initTts() {
+    _flutterTts.setLanguage("bn-BD");
+    _flutterTts.setSpeechRate(0.5);
+    _flutterTts.setPitch(1.0);
     _flutterTts.setStartHandler(() {
       setState(() {
         _ttsState = TtsState.playing;
